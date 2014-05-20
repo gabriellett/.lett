@@ -1,10 +1,28 @@
 # .lett
 
+Some dotfiles :)
+
+Just clone into your home using
+	
+	git clone https://github.com/gabriellett/.lett ~/.lett
+
+## zsh configuration
+
+Install zsh using your default package manager.
+Change default shell using chsh (point it to /bin/zsh)
+
+	git clone https://github.com/gabriellett/.lett/oh-my-zsh into ~/.lett/.oh-my-zsh
+
+Thenk make the following links:
+
+	ln -s ~/.lett/.zshrc ~/.zshrc
+	ln -s ~/.lett/.oh-my-zsh ~/.oh-my-zsh
+
+And restart zsh
+
 ## .vim installation
 
 	ln -s ~/.vim .vim
-	ln -s ~/.vim/.vimrc ~/.vim/.vim
-
 ## .vim plugins
 
 	git clone https://github.com/vim-scripts/XML-Folding.git
