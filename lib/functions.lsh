@@ -1,0 +1,18 @@
+#
+# Search for a word in a file content
+#
+# Arguments:
+#    1. search text - The text to be searched
+#    2. file pattern - OPTIONAL, the file pattern to look for
+# STDOUT:
+#    File names and the line that contains the searched text
+#
+function search(){
+    pat=$2
+
+    if [[ -z "$pat" ]] then
+      pat="*.*"
+    fi
+
+    find . -name "$pat" -print | xargs grep -s "$1"
+}

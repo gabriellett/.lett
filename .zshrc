@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.lett/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys_lett"
+ZSH_THEME="ys_powerline"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -54,10 +54,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/Applications/apache-maven-3.1.1/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -73,3 +69,9 @@ export PATH=/Applications/apache-maven-3.1.1/bin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Load all of the config files in ~/.lett/lib that end in .lsh
+# TIP: Add files you don't want in git to .gitignore
+for config_file ($ZSH/lib/*.zsh); do
+  source $config_file
+done
