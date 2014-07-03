@@ -2,6 +2,12 @@
 
 Some dotfiles :)
 
+## Automatic installation:
+
+	curl -L https://raw.githubusercontent.com/gabriellett/.lett/master/install.sh | sh
+
+## Manual installation
+
 Just clone into your home using
 	
 	git clone https://github.com/gabriellett/.lett ~/.lett
