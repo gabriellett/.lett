@@ -1,6 +1,6 @@
 git clone https://github.com/gabriellett/.lett ~/.lett
 
-git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+curl -L http://install.ohmyz.sh | sh
 
 ln -s ~/.lett/.vim ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
