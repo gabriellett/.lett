@@ -23,3 +23,5 @@ if has('mouse') "Hide mouse
        	set mousehide  " Hide mouse after chars typed
 	set mouse=a "use in all modes
 endif
+
+nmap <silent> <Leader>p :NERDTreeToggle<CR>
