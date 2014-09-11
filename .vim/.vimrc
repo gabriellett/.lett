@@ -32,3 +32,5 @@ set wildignore=*.o,*.obj,*~,*.pyc,*.class,*/tmp/*,*.so,*.swp,*.zip,*.gif,*.jpeg,
 
 set backupdir=~/tmp/vimtemp
 set directory=~/tmp/vimtemp
+
+set clipboard=unnamed
