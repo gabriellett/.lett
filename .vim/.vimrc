@@ -30,7 +30,7 @@ set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~,*.pyc,*.class,*/tmp/*,*.so,*.swp,*.zip,*.gif,*.jpeg,*.jpg,*.png "stuff to ignore when tab completing
 
-set backupdir=~/tmp/vimtemp
-set directory=~/tmp/vimtemp
+set backupdir=~/.lett/.vim/tmp
+set directory=~/.lett/.vim/tmp
 
 set clipboard=unnamed

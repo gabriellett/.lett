@@ -10,3 +10,5 @@ ln -s ~/.lett/.zshrc ~/.zshrc
 
 cp ~/.lett/to-oh-my-zsh/themes/ys_powerline.zsh-theme ~/.oh-my-zsh/themes
 cp ~/.lett/to-oh-my-zsh/functions/git.zsh ~/.oh-my-zsh/functions
+
+mkdir ~/.lett/.vim/tmp
