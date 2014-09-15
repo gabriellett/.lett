@@ -46,3 +46,6 @@ And restart zsh
 	pacman -S python
 	pip install --user git+git://github.com/Lokaltog/powerline
 	
+### Troubleshooting
+
+If you are getting swap files errors, make sure your vim tmp dir is created (check the location at install.sh)
