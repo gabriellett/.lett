@@ -12,7 +12,7 @@ Just clone into your home using
 	
 	git clone https://github.com/gabriellett/.lett ~/.lett
 
-## zsh configuration
+### zsh configuration
 
 Install zsh using your default package manager.
 Change default shell using chsh (point it to /bin/zsh)
@@ -26,10 +26,10 @@ Thenk make the following links:
 
 And restart zsh
 
-## .vim installation
+### .vim installation
 
 	ln -s ~/.vim .vim
-## .vim plugins
+### .vim plugins
 
 	git clone https://github.com/vim-scripts/XML-Folding.git
 	git clone https://github.com/kien/ctrlp.vim.git
@@ -39,7 +39,7 @@ And restart zsh
 	git clone https://github.com/nelstrom/vim-markdown-folding.git
 	git clone https://github.com/tpope/vim-surround.git
 	
-## install powerline
+### install powerline
 
 (you can also install it from the AUR)
 
