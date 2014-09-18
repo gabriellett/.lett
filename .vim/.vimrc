@@ -34,3 +34,6 @@ set backupdir=~/.lett/.vim/tmp
 set directory=~/.lett/.vim/tmp
 
 set clipboard=unnamed
+
+nmap <silent> <Leader>c :.w !pbcopy<CR><CR>
+nmap <silent> <Leader>v :r !pbpaste<CR>
