@@ -37,3 +37,5 @@ set clipboard=unnamed
 
 nmap <silent> <Leader>c :.w !pbcopy<CR><CR>
 nmap <silent> <Leader>v :r !pbpaste<CR>
+
+set iskeyword-=_
