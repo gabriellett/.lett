@@ -39,3 +39,8 @@ nmap <silent> <Leader>c :.w !pbcopy<CR><CR>
 nmap <silent> <Leader>v :r !pbpaste<CR>
 
 set iskeyword-=_
+
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
