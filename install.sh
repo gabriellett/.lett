@@ -16,5 +16,8 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/cu
 #vim stuff: 
 git clone https://github.com/mileszs/ack.vim ~/.lett/.vim/bundle/ack.vim
 git clone https://github.com/kien/ctrlp.vim.git ~/.lett/.vim/bundle/ctrlp.vim
+git clone https://github.com/easymotion/vim-easymotion ~/.lett/.vim/bundle/vim-easymotion
+git clone https://github.com/lenniboy/vim-scala ~/.lett/.vim/bundle/scala.vim
+git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
 
 mkdir ~/.lett/.vim/tmp
