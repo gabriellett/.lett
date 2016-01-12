@@ -79,3 +79,7 @@ omap / <Plug>(easymotion-tn)
 " different highlight method and have some other features )
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
