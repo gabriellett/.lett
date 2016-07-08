@@ -83,3 +83,6 @@ map  N <Plug>(easymotion-prev)
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+
+set backspace=2 " make backspace work like most other apps
+set backspace=indent,eol,start
