@@ -10,7 +10,7 @@ ln -s ~/.lett/.zshrc ~/.zshrc
 
 cp ~/.lett/to-oh-my-zsh/themes/ys_powerline.zsh-theme ~/.oh-my-zsh/themes
 cp ~/.lett/to-oh-my-zsh/functions/git.zsh ~/.oh-my-zsh/functions
-cp -R ~/.lett/to-oh-my-zsh/plugins/* ~/oh-my-zsh/plugins/
+cp -R ~/.lett/to-oh-my-zsh/plugins/* ~/.oh-my-zsh/plugins/
 
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
