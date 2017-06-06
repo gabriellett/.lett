@@ -85,3 +85,8 @@ nnoremap k gk
 
 set backspace=2 " make backspace work like most other apps
 set backspace=indent,eol,start
+
+set foldmethod=syntax
+set foldnestmax=7
+set foldlevel=8
+set nofoldenable
