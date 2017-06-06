@@ -90,3 +90,5 @@ source $ZSH/oh-my-zsh.sh
 for config_file (~/.lett/lib/*.lsh); do
   source $config_file
 done
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
