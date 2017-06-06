@@ -21,5 +21,6 @@ git clone https://github.com/easymotion/vim-easymotion ~/.lett/.vim/bundle/vim-e
 git clone https://github.com/lenniboy/vim-scala ~/.lett/.vim/bundle/scala.vim
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
 git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim.json
+git clone --depth=1 https://github.com/rust-lang/rust.vim.git ~/.vim/bundle/rust.vim
 
 mkdir ~/.lett/.vim/tmp
