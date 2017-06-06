@@ -34,8 +34,6 @@ set wildignore=*.o,*.obj,*~,*.pyc,*.class,*/tmp/*,*.so,*.swp,*.zip,*.gif,*.jpeg,
 set backupdir=~/.lett/.vim/tmp
 set directory=~/.lett/.vim/tmp
 
-set clipboard=unnamed
-
 nmap <silent> <Leader>c :.w !pbcopy<CR><CR>
 nmap <silent> <Leader>v :r !pbpaste<CR>
 
