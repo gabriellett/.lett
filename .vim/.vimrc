@@ -25,6 +25,7 @@ if has('mouse') "Hide mouse
 endif
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
+nmap <silent> <Leader>l :NERDTreeFind<CR>
 
 set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
