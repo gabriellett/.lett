@@ -7,6 +7,7 @@ mv ~/.zshrc ~/.zshrc_bkp
 ln -s ~/.lett/.vim ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
 ln -s ~/.lett/.zshrc ~/.zshrc
+ln -s ~/.lett/.tmux.conf ~/.tmux.conf
 
 cp ~/.lett/to-oh-my-zsh/themes/ys_powerline.zsh-theme ~/.oh-my-zsh/themes
 cp ~/.lett/to-oh-my-zsh/functions/git.zsh ~/.oh-my-zsh/functions
@@ -22,5 +23,9 @@ git clone https://github.com/lenniboy/vim-scala ~/.lett/.vim/bundle/scala.vim
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
 git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim.json
 git clone --depth=1 https://github.com/rust-lang/rust.vim.git ~/.vim/bundle/rust.vim
+
+#Powerline for TMUX
+pip install powerline-status
+pip install psutil
 
 mkdir ~/.lett/.vim/tmp

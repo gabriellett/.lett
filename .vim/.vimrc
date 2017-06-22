@@ -6,7 +6,15 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/
+" set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+
+if has("gui_running")
+	let s:uname = system("uname")
+	if s:uname == "Darwin\n"
+		set guifont=Meslo\ LG\ S\ for\ Powerline
+	endif
+endif
 
 " Always show statusline
 set laststatus=2
