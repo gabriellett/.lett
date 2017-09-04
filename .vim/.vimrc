@@ -98,3 +98,6 @@ set foldmethod=syntax
 set foldnestmax=7
 set foldlevel=8
 set nofoldenable
+
+" this is needed when using tmux to assign the system clipboard to +
+set clipboard=unnamedplus
