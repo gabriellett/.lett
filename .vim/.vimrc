@@ -45,8 +45,6 @@ set directory=~/.lett/.vim/tmp
 nmap <silent> <Leader>c :.w !pbcopy<CR><CR>
 nmap <silent> <Leader>v :r !pbpaste<CR>
 
-set iskeyword-=_
-
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
@@ -100,4 +98,4 @@ set foldlevel=8
 set nofoldenable
 
 " this is needed when using tmux to assign the system clipboard to +
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
