@@ -89,6 +89,9 @@ map  N <Plug>(easymotion-prev)
 nnoremap j gj
 nnoremap k gk
 
+:nmap <F1> :echo<CR>
+:imap <F1> <C-o>:echo<CR>
+
 set backspace=2 " make backspace work like most other apps
 set backspace=indent,eol,start
 
@@ -99,3 +102,5 @@ set nofoldenable
 
 " this is needed when using tmux to assign the system clipboard to +
 "set clipboard=unnamedplus
+
+let @j='yiWF a[$a](https://bionexo.atlassian.net/browse/pa)'

@@ -1,2 +1,43 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/Applications/apache-maven-3.1.1/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+export TERM=screen-256color
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+function tenv {
+  echo "Starting environment for $1"
+  ~/dev/tmux_env/$1
+}
+
+function kubenv {
+  file=""
+
+  if [ "$1" = "prod" ]
+  then
+    echo "Switching kube env to production..."
+    file="/home/lett/.kube/config_prod"
+    bkp_file="/home/lett/.kube/config_dev"
+  else
+    echo "Switching kube env to development..."
+    file="/home/lett/.kube/config_dev"
+    bkp_file="/home/lett/.kube/config_prod"
+  fi
+
+  if [ ! -f "$file" ]
+  then 
+    echo "File $file not found, aborting..."
+    return 1
+  fi
+
+  if [ -f "$bkp_file" ]
+  then 
+    echo "Backup file $bkp_file already exists, make sure you are not already in the desired env."
+    return 1
+  fi
+
+  echo "Moving files arround..."
+  mv /home/lett/.kube/config "$bkp_file" && mv "$file" /home/lett/.kube/config
+  echo "Done!"
+}
