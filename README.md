@@ -20,7 +20,7 @@ git clone https://github.com/gabriellett/.lett ~/.lett
 
 Link the .vim, .vimrc, .zshrc and .tmux.conf from .lett to your home
 
-To make powerline pretties copy `.lett/to-oh-my-zsh/themes/ys_powerline.zsh-theme` to `~/.oh-my-zsh/themes
+To make powerline prettier copy `.lett/to-oh-my-zsh/themes/ys_powerline.zsh-theme` to `~/.oh-my-zsh/themes
 
 To make git directory info show on your shell, copy `.lett/to-oh-my-zsh/functions/git.zsh` to `~/.oh-my-zsh/functions`
 
