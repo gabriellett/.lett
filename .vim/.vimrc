@@ -54,9 +54,6 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 " Bi-directional find motion
