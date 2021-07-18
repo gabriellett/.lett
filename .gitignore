@@ -1,2 +1,4 @@
 .vim/.netrwhist
 .vim/tmp
+.vim/bundle
+.vim/plugged
