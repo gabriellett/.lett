@@ -44,7 +44,7 @@ export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 
-plugins=(git brew imgcat git-extras z zsh-syntax-highlighting)
+plugins=(git brew  git-extras z zsh-syntax-highlighting nx-completion)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -14,6 +14,8 @@ cp ~/.lett/to-oh-my-zsh/functions/git.zsh ~/.oh-my-zsh/functions
 cp -R ~/.lett/to-oh-my-zsh/plugins/* ~/.oh-my-zsh/plugins/
 
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone git@github.com:jscutlery/nx-completion.git ~/.oh-my-zsh/custom/plugins/nx-completion
+
 
 #vim stuff: 
 git clone https://github.com/mileszs/ack.vim ~/.lett/.vim/bundle/ack.vim
