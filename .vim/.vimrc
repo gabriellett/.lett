@@ -116,6 +116,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " let b:ale_fixers = ['prettier', 'eslint']
