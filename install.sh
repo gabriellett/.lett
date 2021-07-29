@@ -4,7 +4,7 @@ mv ~/.zshrc ~/.vim ~/.vimrc ~/.alacritty.yml ~/.fzf.zsh ~/.tmux.conf ~/.oh-my-zs
 
 curl -L http://install.ohmyz.sh | sh
 
-brew install fzf ripgrep
+brew install fzf ripgrep alacritty
 
 git clone https://github.com/gabriellett/.lett ~/.lett
 
