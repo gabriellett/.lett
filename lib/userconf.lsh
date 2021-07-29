@@ -1,10 +1,11 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/Applications/apache-maven-3.1.1/bin:$PATH
 
-export NVM_DIR="$HOME/.nvm"
 export TERM=screen-256color
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 function tenv {
   echo "Starting environment for $1"
@@ -26,13 +27,13 @@ function kubenv {
   fi
 
   if [ ! -f "$file" ]
-  then 
+  then
     echo "File $file not found, aborting..."
     return 1
   fi
 
   if [ -f "$bkp_file" ]
-  then 
+  then
     echo "Backup file $bkp_file already exists, make sure you are not already in the desired env."
     return 1
   fi
