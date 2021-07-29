@@ -1,13 +1,19 @@
+# Backup all current config
+mkdir ~/init_files_before_dotlett
+mv ~/.zshrc ~/.vim ~/.vimrc ~/.alacritty.yml ~/.fzf.zsh ~/.tmux.conf ~/.oh-my-zsh ~/.lett ~/init_files_before_dotlett/
+
 curl -L http://install.ohmyz.sh | sh
 
-git clone https://github.com/gabriellett/.lett ~/.lett
+brew install fzf ripgrep
 
-mv ~/.zshrc ~/.zshrc_bkp
+git clone https://github.com/gabriellett/.lett ~/.lett
 
 ln -s ~/.lett/.vim ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
 ln -s ~/.lett/.zshrc ~/.zshrc
 ln -s ~/.lett/.tmux.conf ~/.tmux.conf
+ln -s ~/.lett/.fzf.zsh ~/.fzf.zsh
+ln -s ~/.lett/.alacritty.yml ~/.alacritty.yml
 
 cp ~/.lett/to-oh-my-zsh/themes/ys_powerline.zsh-theme ~/.oh-my-zsh/themes
 cp ~/.lett/to-oh-my-zsh/functions/git.zsh ~/.oh-my-zsh/functions
