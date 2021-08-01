@@ -62,7 +62,8 @@ git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim.json
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir ~/.lett/.vim/tmp
 
-echo "Vim setup done, make sure you run :PlugInstall when you open it"
+echo "Vim setup done, running plug install..."
+vim -c ':PlugInstall | quit | quit'
 
 echo "Setting up powerline for tmux"
 pip3 install powerline-status
