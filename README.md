@@ -56,8 +56,8 @@ git clone --depth=1 https://github.com/rust-lang/rust.vim.git ~/.vim/bundle/rust
 If you want a pretty powerline on tmux, use:
 
 ```
-pip install powerline-status
-pip install psutil
+pip3 install powerline-status
+pip3 install psutil
 ```
 
 And finally create the temp VIM dir so vim stop complaining about it:
