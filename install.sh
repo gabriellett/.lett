@@ -43,6 +43,11 @@ echo "Installing some plugins on oh-my-zsh"
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone git://github.com/jscutlery/nx-completion.git ~/.oh-my-zsh/custom/plugins/nx-completion
 
+echo "Installing nvim..."
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+nvm install stable
+nvm alias default stable
+
 echo "Setting up vim"
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -51,9 +56,6 @@ git clone https://github.com/easymotion/vim-easymotion ~/.lett/.vim/bundle/vim-e
 git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim.json
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir ~/.lett/.vim/tmp
-
-echo "Installing nvim..."
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 echo "Vim setup done, make sure you run :PlugInstall when you open it"
 
