@@ -41,7 +41,7 @@ cp -R ~/.lett/to-oh-my-zsh/plugins/* ~/.oh-my-zsh/plugins/
 
 echo "Installing some plugins on oh-my-zsh"
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-git clone git@github.com:jscutlery/nx-completion.git ~/.oh-my-zsh/custom/plugins/nx-completion
+git clone git://github.com/jscutlery/nx-completion.git ~/.oh-my-zsh/custom/plugins/nx-completion
 
 echo "Setting up vim"
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -52,8 +52,11 @@ git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim.json
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir ~/.lett/.vim/tmp
 
+echo "Installing nvim..."
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
 echo "Vim setup done, make sure you run :PlugInstall when you open it"
 
 echo "Setting up powerline for tmux"
-pip install powerline-status
-pip install psutil
+pip3 install powerline-status
+pip3 install psutil
