@@ -1,5 +1,10 @@
 echo "Hello there! This script will install lett's environment on your machine"
 
+if [ -d ~/init_files_before_dotlett ]; then
+	echo "Backup directory already exists, please remove it or move it and run this install script again"
+	exit 1
+fi
+
 echo "Starting by backing up all your current files to ~/init_files_before_dotlett...."
 mkdir ~/init_files_before_dotlett
 mv ~/.zshrc ~/.vim ~/.vimrc ~/.alacritty.yml ~/.fzf.zsh ~/.tmux.conf ~/.oh-my-zsh ~/.lett ~/init_files_before_dotlett/
