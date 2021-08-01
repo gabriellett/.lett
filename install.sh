@@ -25,8 +25,8 @@ else
 fi
 
 echo "Installing all tools from brew, this might take a while..."
-brew install fzf ripgrep
-brew install --cask spotify sip rectangle alfred kap alacritty
+brew install fzf ripgrep alacritty rectangle alfred kap
+brew install --cask spotify sip 
 
 echo "Now we are ready to clone the dotfiles"
 git clone https://github.com/gabriellett/.lett ~/.lett
