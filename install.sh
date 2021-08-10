@@ -64,6 +64,8 @@ mkdir ~/.lett/.vim/tmp
 
 echo "Vim setup done, running plug install..."
 vim -c ':PlugInstall | quit | quit'
+vim -c ':CocInstall coc-tsserver | quit | quit'
+vim -c ':CocInstall coc-eslint | quit | quit'
 
 echo "Setting up powerline for tmux"
 pip3 install powerline-status
