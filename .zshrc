@@ -43,6 +43,7 @@ export HISTSIZE=32768;
 export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+export SAVEHIST=32768;
 
 plugins=(git brew  git-extras z zsh-syntax-highlighting nx-completion)
 
