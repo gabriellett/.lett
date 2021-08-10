@@ -294,6 +294,13 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" PLUGIN: FZF
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <C-f> :Rg<CR>
+nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> <Leader>/ :BLines<CR>
+nnoremap <silent> <Leader>g :Commits<CR>
+
 " Ctrl P to Files
 noremap <C-p> :Files<Cr>
 let g:fzf_layout = { 'down': '40%' }
