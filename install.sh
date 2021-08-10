@@ -25,7 +25,7 @@ else
 fi
 
 echo "Installing all tools from brew, this might take a while..."
-brew install fzf ripgrep alacritty rectangle alfred kap
+brew install fzf ripgrep alacritty rectangle alfred kap tmux
 brew install --cask spotify sip 
 
 echo "Now we are ready to clone the dotfiles"
