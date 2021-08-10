@@ -68,6 +68,7 @@ vim -c ':PlugInstall | quit | quit'
 echo "Setting up powerline for tmux"
 pip3 install powerline-status
 pip3 install psutil
+echo "source '$(pip3 show powerline-status | grep Location | awk '{ print $2 }')/powerline/bindings/tmux/powerline.conf'" | cat - ~/.tmux.conf > ~/.tmux.conf.tmp && mv ~/.tmux.conf.tmp ~/.tmux.conf
 
 echo "Installing fonts..."
 curl -LJ "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf" -o ~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
