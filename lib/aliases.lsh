@@ -1,3 +1,4 @@
 alias grep='grep --color'
 alias mvnci='mvn clean install -o'
 alias ll='ls -lah'
+alias lg='lazygit'
