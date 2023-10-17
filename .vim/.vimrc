@@ -119,6 +119,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
 call plug#end()
 
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-eslint'
+  \ ]
+
 " let b:ale_fixers = ['prettier', 'eslint']
 " let g:ale_fix_on_save = 1
 let g:ale_fixers = {'typescript': ['eslint']}
