@@ -1,0 +1,4 @@
+function tenv {
+  echo "Starting environment for $1"
+  ~/dev/tmux_env/$1
+}

@@ -1,4 +1,11 @@
+alias gst="git status"
+
 alias grep='grep --color'
-alias mvnci='mvn clean install -o'
-alias ll='ls -lah'
-alias lg='lazygit'
+alias l='LANG=C ls -lah --group-directories-first --color'
+alias vim="nvim"
+alias vi="nvim"
+alias ".."="cd .."
+
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[[3~" delete-char-or-list
