@@ -9,3 +9,10 @@ trim_trailing_whitespace = true
 
 [*.{diff,md}]
 trim_trailing_whitespace = false
+
+[*.lua]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = tab
+trim_trailing_whitespace = true
