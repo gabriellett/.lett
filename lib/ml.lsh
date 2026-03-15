@@ -1,0 +1,1 @@
+function ml() { mkdir -p "$(dirname "$1")" && mkdir -p "$(dirname "$2")" && rsync -aP --no-links "$1" "$2" && ln -sf "$2" "$1" }
