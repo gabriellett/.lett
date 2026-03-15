@@ -1,4 +1,5 @@
 alias gst="git status"
+alias gco="git checkout"
 
 alias grep='grep --color'
 alias l='LANG=C ls -lah --group-directories-first --color'
