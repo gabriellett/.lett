@@ -1,6 +1,6 @@
 require("lett.remap")
-require("lett.lazy_init")
 require("lett.set")
+require("lett.lazy_init")
 require("lett.autocmd")
 require("lett.ui")
 require("lett.lsp")
