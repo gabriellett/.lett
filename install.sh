@@ -25,7 +25,7 @@ if [ "$OS" == "Darwin" ]; then
   echo "Backup done!"
 
   echo "Installing all tools from brew..."
-  brew install fzf ripgrep alacritty rectangle alfred tmux zoxide neovim starship font-jetbrains-mono-nerd-font
+  brew install fzf ripgrep alacritty rectangle alfred tmux zoxide neovim starship font-jetbrains-mono-nerd-font tree-sitter-cli
   brew install --cask spotify sip
 elif [ "$OS" == "Linux" ]; then
   # echo "This installer will consider hyprland is already installed (until I actually configure it to install it)"
