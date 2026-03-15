@@ -4,3 +4,7 @@ require("lett.set")
 require("lett.autocmd")
 require("lett.ui")
 require("lett.lsp")
+
+vim.filetype.add({
+  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+})

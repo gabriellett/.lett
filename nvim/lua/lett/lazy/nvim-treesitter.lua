@@ -1,30 +1,135 @@
-return({
-  'nvim-treesitter/nvim-treesitter',
-  lazy = false,
-  build = ':TSUpdate',
-  config = function()
-	  require'nvim-treesitter'.setup ({
-		  -- A list of parser names, or "all"
-		  ensure_installed = { "help", "vimdoc", "javascript", "typescript", "c", "lua", "rust", "jsdoc", "bash" },
+return {
+  {
+    'nvim-treesitter/nvim-treesitter',
+    branch = 'main',
+    lazy = false,
+    build = ':TSUpdate',
+    config = function()
+      require('nvim-treesitter').setup({
+        install_dir = vim.fn.stdpath('data') .. '/site',
+      })
 
-		  -- Install parsers synchronously (only applied to `ensure_installed`)
+      local parsers = {
+        'bash',
+        'css',
+        'diff',
+        'editorconfig',
+        'git_config',
+        'git_rebase',
+        'gitattributes',
+        'gitcommit',
+        'gitignore',
+        'html',
+				'hyprlang',
+        'javascript',
+        'jsdoc',
+        'json',
+        'lua',
+        'make',
+        'markdown',
+        'markdown_inline',
+        'python',
+        'regex',
+				'rust',
+        'toml',
+        'tsx',
+        'typescript',
+        'vim',
+        'vimdoc',
+        'xml',
+        'yaml',
+      }
 
-		  sync_install = false,
+      vim.api.nvim_create_autocmd('User', {
+        group = vim.api.nvim_create_augroup('treesitter_install', { clear = true }),
+        pattern = 'LazyDone',
+        once = true,
+        callback = function()
+          require('nvim-treesitter').install(parsers)
+        end,
+      })
+    end,
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    branch = 'main',
+    event = 'BufReadPost',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('nvim-treesitter-textobjects').setup({
+        select = {
+          lookahead = true,
+        },
+        move = {
+          set_jumps = true,
+        },
+      })
 
-		  -- Automatically install missing parsers when entering buffer
-		  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-		  auto_install = true,
+      local map = vim.keymap.set
 
-		  highlight = {
-			  -- `false` will disable the whole extension
-			  enable = true,
+      -- Textobject selections
+      map({ 'x', 'o' }, 'af', function()
+        require('nvim-treesitter-textobjects.select').select_textobject('@function.outer', 'textobjects')
+      end, { desc = 'outer function' })
+      map({ 'x', 'o' }, 'if', function()
+        require('nvim-treesitter-textobjects.select').select_textobject('@function.inner', 'textobjects')
+      end, { desc = 'inner function' })
+      map({ 'x', 'o' }, 'ac', function()
+        require('nvim-treesitter-textobjects.select').select_textobject('@class.outer', 'textobjects')
+      end, { desc = 'outer class' })
+      map({ 'x', 'o' }, 'ic', function()
+        require('nvim-treesitter-textobjects.select').select_textobject('@class.inner', 'textobjects')
+      end, { desc = 'inner class' })
+      map({ 'x', 'o' }, 'aa', function()
+        require('nvim-treesitter-textobjects.select').select_textobject('@parameter.outer', 'textobjects')
+      end, { desc = 'outer argument' })
+      map({ 'x', 'o' }, 'ia', function()
+        require('nvim-treesitter-textobjects.select').select_textobject('@parameter.inner', 'textobjects')
+      end, { desc = 'inner argument' })
 
-			  -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-			  -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-			  -- Using this option may slow down your editor, and you may see some duplicate highlights.
-			  -- Instead of true it can also be a list of languages
-			  additional_vim_regex_highlighting = false,
-		  },
-	  })
-  end
-})
+      -- Movement
+      map({ 'n', 'x', 'o' }, ']f', function()
+        require('nvim-treesitter-textobjects.move').goto_next_start('@function.outer', 'textobjects')
+      end, { desc = 'next function start' })
+      map({ 'n', 'x', 'o' }, '[f', function()
+        require('nvim-treesitter-textobjects.move').goto_previous_start('@function.outer', 'textobjects')
+      end, { desc = 'previous function start' })
+      map({ 'n', 'x', 'o' }, ']F', function()
+        require('nvim-treesitter-textobjects.move').goto_next_end('@function.outer', 'textobjects')
+      end, { desc = 'next function end' })
+      map({ 'n', 'x', 'o' }, '[F', function()
+        require('nvim-treesitter-textobjects.move').goto_previous_end('@function.outer', 'textobjects')
+      end, { desc = 'previous function end' })
+      map({ 'n', 'x', 'o' }, ']k', function()
+        require('nvim-treesitter-textobjects.move').goto_next_start('@class.outer', 'textobjects')
+      end, { desc = 'next class start' })
+      map({ 'n', 'x', 'o' }, '[k', function()
+        require('nvim-treesitter-textobjects.move').goto_previous_start('@class.outer', 'textobjects')
+      end, { desc = 'previous class start' })
+      map({ 'n', 'x', 'o' }, ']K', function()
+        require('nvim-treesitter-textobjects.move').goto_next_end('@class.outer', 'textobjects')
+      end, { desc = 'next class end' })
+      map({ 'n', 'x', 'o' }, '[K', function()
+        require('nvim-treesitter-textobjects.move').goto_previous_end('@class.outer', 'textobjects')
+      end, { desc = 'previous class end' })
+    end,
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    event = 'VeryLazy',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    opts = {
+      max_lines = 3,
+      min_window_height = 20,
+    },
+    keys = {
+      {
+        '[C',
+        function()
+          require('treesitter-context').go_to_context()
+        end,
+        desc = 'go to context',
+      },
+    },
+  },
+}
